@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Mateo Scioscia
 
-## Getting Started
+Sitio personal hecho con Next.js 16, React 19 y Tailwind CSS 4.
 
-First, run the development server:
+## Verlo en la compu
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://localhost:3000. Se actualiza solo al guardar un archivo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Cambiar los textos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Todo el contenido está en un solo archivo: `src/content/site.ts`.**
 
-## Learn More
+Ahí se editan los datos personales, la descripción, las skills, la formación,
+la trayectoria laboral, los contadores y los proyectos. No hace falta tocar
+ningún otro archivo para cambiar lo que dice la página.
 
-To learn more about Next.js, take a look at the following resources:
+Lo que diga `TODO` es algo que falta completar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Imágenes y archivos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Todo lo que esté en la carpeta `public/` queda accesible en la web con esa
+misma ruta (`public/foto.jpg` → `misitio.com/foto.jpg`).
 
-## Deploy on Vercel
+| Archivo | Para qué |
+| --- | --- |
+| `public/profile.jpg` | Foto del inicio |
+| `public/cv.pdf` | Lo que descarga el botón "Descargar CV" |
+| `public/projects/*.png` | Capturas de los proyectos |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Los nombres de las capturas tienen que coincidir con el campo `image` de cada
+proyecto en `site.ts`. Si el archivo no existe, se muestra un recuadro con la
+inicial en vez de una imagen rota.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Embeber tableros
+
+Cada proyecto puede tener un campo `embed` con la URL de un reporte publicado.
+Si está completo, el tablero se muestra dentro de la página, interactivo y con
+botón de pantalla completa.
+
+- **Power BI:** abrir el reporte en Power BI Service → Archivo → Insertar
+  informe → Publicar en la web → copiar el link.
+- **Looker Studio:** Compartir → Insertar informe → activar "Habilitar la
+  inserción" → usar la URL de `/embed/reporting/<id>`.
+
+> Ojo: "Publicar en la web" de Power BI genera un link público sin
+> autenticación. Usarlo solo con datos que puedan ser públicos.
+
+## Estructura
+
+```
+src/
+  app/
+    page.tsx                    Página principal
+    proyectos/[slug]/page.tsx   Página de detalle de cada proyecto
+    globals.css                 Colores, tipografías y animaciones
+  components/                   Nav, Footer, Projects, Counter, Reveal, ReportEmbed
+  content/site.ts               ← TODO EL CONTENIDO
+  lib/projects.ts               Chequea qué capturas existen
+```
+
+## Publicar
+
+Con el repo en GitHub, importarlo en [vercel.com](https://vercel.com). Cada
+`git push` republica el sitio automáticamente.
