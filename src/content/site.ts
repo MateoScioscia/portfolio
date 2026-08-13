@@ -176,6 +176,14 @@ export type Project = {
    *   enlace puede ver", después usar la URL de /embed/reporting/<id>.
    */
   embed?: string;
+  /**
+   * Proporción del visor, en formato "ancho / alto". Por defecto "16 / 10",
+   * que sirve para Power BI. Looker Studio suele dar reportes mucho más
+   * altos: usá las medidas que aparecen en su código de inserción.
+   */
+  embedRatio?: string;
+  /** Ancho máximo del visor, para reportes angostos y altos. */
+  embedMaxWidth?: string;
   live?: string;
   repo?: string;
   year?: string;
@@ -258,14 +266,11 @@ export const projects: Project[] = [
     ],
     category: "Looker Studio",
     year: "2023", // TODO: confirmar el año
-    /**
-     * El reporte es público, pero tiene deshabilitada la inserción en otros
-     * sitios. Para que se vea embebido acá: Looker Studio → Compartir →
-     * Insertar informe → activar "Habilitar la inserción", y después pegar:
-     * https://lookerstudio.google.com/embed/reporting/f91a92a7-aad6-46da-b471-91a68004e802
-     * Mientras tanto, el botón "Ver el sitio" abre el reporte real.
-     */
-    embed: "",
+    // Medidas tomadas del código de inserción que da Looker Studio (600x2500).
+    embed:
+      "https://datastudio.google.com/embed/reporting/f91a92a7-aad6-46da-b471-91a68004e802/page/VCzwF",
+    embedRatio: "600 / 2500",
+    embedMaxWidth: "640px",
     live: "https://datastudio.google.com/s/q1mOCYTKEnI",
     image: "/projects/analisis-jugadores.png",
   },

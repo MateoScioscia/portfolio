@@ -10,9 +10,13 @@ import { useRef, useState } from "react";
 export default function ReportEmbed({
   src,
   title,
+  ratio = "16 / 10",
+  maxWidth,
 }: {
   src: string;
   title: string;
+  ratio?: string;
+  maxWidth?: string;
 }) {
   const wrapper = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
@@ -25,7 +29,8 @@ export default function ReportEmbed({
     <div>
       <div
         ref={wrapper}
-        className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-line bg-paper-raised"
+        style={{ aspectRatio: ratio, maxWidth }}
+        className="relative mx-auto w-full overflow-hidden rounded-2xl border border-line bg-paper-raised"
       >
         {!loaded && (
           <div className="absolute inset-0 flex items-center justify-center text-sm text-ink-muted">

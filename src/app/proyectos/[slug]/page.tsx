@@ -102,7 +102,12 @@ export default async function ProjectPage({
         <div className="mt-12">
           {project.embed ? (
             <Reveal>
-              <ReportEmbed src={project.embed} title={project.title} />
+              <ReportEmbed
+                src={project.embed}
+                title={project.title}
+                ratio={project.embedRatio}
+                maxWidth={project.embedMaxWidth}
+              />
             </Reveal>
           ) : project.image ? (
             <Reveal>
