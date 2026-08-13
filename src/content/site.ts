@@ -32,6 +32,7 @@ export const socials = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/mateo-scioscia-1b2060200/",
   },
+  { label: "Mis tableros", href: "https://tableros-publicos.vercel.app" },
   // TODO: agregar GitHub cuando lo tengas
   // { label: "GitHub", href: "https://github.com/usuario" },
 ];
@@ -193,22 +194,22 @@ export const projects: Project[] = [
     slug: "liga-argentina",
     title: "Liga Profesional Argentina — Estadísticas",
     summary:
-      "Tablero de 14 páginas para explorar el rendimiento de los equipos del fútbol argentino: goles, ataques, posesión, faltas, arbitrajes y comparación directa entre clubes.",
+      "Tablero interactivo para explorar el rendimiento de los equipos del fútbol argentino: tabla de posiciones, estadísticas por equipo y gráficos comparativos.",
     description: [
-      "Reporte completo de la Liga Profesional Argentina construido en Power BI. Modelé los datos de la temporada y armé una navegación por secciones para que cualquiera pueda responder sus propias preguntas sin pedirme nada.",
-      "El tablero recorre la tabla de posiciones, goles, ataques, córners, partidos, faltas, pases, defensa, posesión y arbitrajes, e incluye una página de comparación directa entre dos equipos y un tooltip personalizado con el detalle de cada árbitro.",
+      "Reporte de la Liga Profesional Argentina construido en Power BI. Modelé los datos de la temporada y armé una navegación por secciones con menú propio, para que cualquiera pueda responder sus propias preguntas sin pedirme nada.",
+      "Recorre la tabla de posiciones, las estadísticas generales y una sección de gráficos comparativos, con medidas en DAX para las métricas ofensivas y defensivas.",
     ],
     highlights: [
-      "14 páginas navegables con menú propio",
-      "Página de comparación entre equipos",
-      "Tooltip personalizado con el detalle por árbitro",
+      "Navegación por secciones con menú propio",
+      "Tabla de posiciones y estadísticas por equipo",
+      "Gráficos comparativos entre clubes",
       "Medidas en DAX para métricas ofensivas y defensivas",
     ],
     tags: ["Power BI", "DAX", "Power Query", "Modelado de datos"],
     category: "Power BI",
     year: "2025",
-    // TODO: pegar acá la URL de "Publicar en la web" para que quede interactivo
-    embed: "",
+    embed:
+      "https://app.powerbi.com/view?r=eyJrIjoiNGE0MWFkODgtYTAyOC00MzgyLTk2Y2QtYjk5ODY4MjdjZjMyIiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9",
     image: "/projects/liga-argentina.png",
   },
   {
@@ -229,8 +230,8 @@ export const projects: Project[] = [
     tags: ["Power BI", "DAX", "Power Query", "Visualización"],
     category: "Power BI",
     year: "2024",
-    // TODO: pegar acá la URL de "Publicar en la web" para que quede interactivo
-    embed: "",
+    embed:
+      "https://app.powerbi.com/view?r=eyJrIjoiYzlhNWU2YjMtYjQxOC00NmRhLTkyMmMtZTY5ODY2NjY2YWNiIiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9",
     image: "/projects/eurocopa.png",
   },
   {
