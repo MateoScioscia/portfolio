@@ -15,6 +15,7 @@ import {
   socials,
   stats,
   skillGroups,
+  whatsappHref,
 } from "@/content/site";
 
 /** True once the user drops their photo into public/. Avoids a broken image. */
@@ -98,10 +99,12 @@ export default function Home() {
                     Descargar CV
                   </a>
                   <a
-                    href={`mailto:${profile.email}`}
+                    href={whatsappHref()}
+                    target="_blank"
+                    rel="noreferrer"
                     className="pressable rounded-full px-4 py-3 text-sm text-ink-soft underline-offset-4 hover:underline"
                   >
-                    Escribirme
+                    Escribirme por WhatsApp
                   </a>
                 </div>
               </Reveal>
@@ -273,7 +276,7 @@ export default function Home() {
 
             <Reveal delay={180}>
               <a
-                href={`https://wa.me/${profile.phone.replace(/\D/g, "")}`}
+                href={whatsappHref()}
                 target="_blank"
                 rel="noreferrer"
                 className="card-lift block h-full rounded-2xl border border-line bg-paper-raised p-6"

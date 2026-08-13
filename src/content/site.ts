@@ -16,7 +16,16 @@ export const profile = {
   available: true,
   photo: "/profile.jpg", // guardá la foto ahí para que aparezca
   cv: "/cv.pdf",
+  // Mensaje que aparece ya escrito cuando alguien te escribe por WhatsApp.
+  whatsappMessage:
+    "Hola Mateo, ¿cómo estás? Me gustaría que me ayudes en un proyecto...",
 };
+
+/** Link de WhatsApp con el mensaje ya cargado en el chat. */
+export function whatsappHref(message: string = profile.whatsappMessage) {
+  const numero = profile.phone.replace(/\D/g, "");
+  return `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+}
 
 export const socials = [
   {
