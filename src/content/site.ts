@@ -7,9 +7,9 @@
 export const profile = {
   name: "Mateo Scioscia",
   firstName: "Mateo",
-  role: "Analista de Datos & BI",
+  role: "Analista de Datos & BI · IA aplicada",
   tagline:
-    "Transformo datos en información clara para que los equipos decidan mejor. Power BI, SQL y Python aplicados al negocio.",
+    "Transformo datos en información clara para que los equipos decidan mejor. Power BI, SQL y Python aplicados al negocio, con inteligencia artificial para construir más rápido.",
   location: "Buenos Aires, Argentina",
   email: "matescioscia@gmail.com",
   phone: "+54 9 11 6484-0645",
@@ -42,7 +42,8 @@ export const about = {
   paragraphs: [
     "Estudio la Licenciatura en Sistemas de Información de las Organizaciones en la UBA y hace más de tres años trabajo con datos: los extraigo, los limpio y los convierto en tableros que la gente usa todos los días.",
     "Hoy estoy en Prevención de Lavado de Activos en Grupo ST, donde construyo dashboards de control de riesgo financiero en tiempo real y automatizo procesos operativos con Power Automate. Antes fui Analista BI en Life Seguros durante casi tres años, manteniendo y ampliando paneles en Power BI y Qlik Sense.",
-    "Me interesa el punto donde el análisis de datos se cruza con la inteligencia artificial. Curioso, proactivo y de adaptación rápida: si algo no sé, lo aprendo.",
+    "Trabajo a diario con inteligencia artificial, en particular con Claude: la uso para desarrollar productos completos, automatizar tareas repetitivas y acelerar el análisis. Las páginas y tableros que ves en este portfolio salieron de ese flujo de trabajo.",
+    "Curioso, proactivo y de adaptación rápida: si algo no sé, lo aprendo.",
   ],
 };
 
@@ -82,6 +83,16 @@ export const skillGroups = [
       "Optimización de procesos operativos",
       "Matrices de riesgo",
       "Seguimiento de issues de datos",
+    ],
+  },
+  {
+    title: "Inteligencia Artificial",
+    items: [
+      "Claude y Claude Code",
+      "Desarrollo asistido por IA",
+      "Prompt engineering",
+      "Automatización con agentes",
+      "IA aplicada al análisis de datos",
     ],
   },
   {
@@ -276,6 +287,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
     category: "Desarrollo web",
     year: "2026",
+    live: "https://ps-store-alpha.vercel.app/",
     image: "/projects/tienda-juegos.png",
   },
 ];
