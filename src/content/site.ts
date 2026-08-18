@@ -197,6 +197,7 @@ export const projectCategories = [
   "Todos",
   "Power BI",
   "Looker Studio",
+  "Python",
   "Desarrollo web",
 ];
 
@@ -276,6 +277,30 @@ export const projects: Project[] = [
     embedMaxWidth: "640px",
     live: "https://datastudio.google.com/s/q1mOCYTKEnI",
     image: "/projects/analisis-jugadores.png",
+  },
+  {
+    slug: "scouting-liga-profesional",
+    title: "Scouting Engine — Liga Profesional",
+    summary:
+      "App de scouting futbolístico en Python: perfila jugadores por percentiles contra su posición y encuentra perfiles similares con similitud de coseno.",
+    description: [
+      "Herramienta interactiva para identificar y comparar jugadores de la Liga Profesional Argentina. Parte de un dataset propio armado desde FBref y convierte las estadísticas crudas en un perfil legible: cada métrica se transforma en un percentil calculado contra los jugadores de la misma posición, así un número deja de ser un dato suelto y pasa a decir qué tan bueno es en su contexto.",
+      "La pestaña de radar dibuja ese perfil como un gráfico de pizza, con los sectores coloreados según el rendimiento: verde arriba del percentil 70, amarillo entre 40 y 70, rojo por debajo. La de jugadores similares estandariza las métricas y aplica similitud de coseno para devolver los perfiles más parecidos al que elijas, con su porcentaje de coincidencia. La tercera muestra la tabla completa filtrada y permite descargarla en CSV.",
+      "Está construida para no depender de un solo dataset: filtro de minutos mínimos, elección libre de las métricas que entran en el análisis, detección automática del grupo posicional desde el código de FBref con opción a corregirlo a mano, y carga de un CSV propio detectando solo el separador y el formato decimal.",
+    ],
+    highlights: [
+      "Percentiles calculados contra jugadores de la misma posición",
+      "Radar de rendimiento con mplsoccer, coloreado por percentil",
+      "Búsqueda de jugadores similares por similitud de coseno",
+      "Métricas configurables, filtro de minutos y carga de CSV propio",
+      "Exportación de la tabla filtrada a CSV",
+    ],
+    tags: ["Python", "Streamlit", "pandas", "scikit-learn", "mplsoccer"],
+    category: "Python",
+    year: "2026",
+    live: "https://scouting-liga-profesional.streamlit.app",
+    repo: "https://github.com/MateoScioscia/scouting-liga-profesional",
+    image: "/projects/scouting-engine.png",
   },
   {
     slug: "tienda-juegos",

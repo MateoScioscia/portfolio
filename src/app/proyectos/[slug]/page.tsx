@@ -81,7 +81,9 @@ export default async function ProjectPage({
                 >
                   {project.category === "Desarrollo web"
                     ? "Ver el sitio"
-                    : "Abrir el tablero"}
+                    : project.category === "Python"
+                      ? "Abrir la app"
+                      : "Abrir el tablero"}
                 </a>
               )}
               {project.repo && (
@@ -127,7 +129,8 @@ export default async function ProjectPage({
                     "Publicá el reporte desde Power BI Service (Archivo → Insertar informe → Publicar en la web) y pegá la URL en el campo embed de src/content/site.ts para que quede interactivo acá."}
                   {project.category === "Looker Studio" &&
                     "En Looker Studio: Compartir → Insertar informe → activá “Habilitar la inserción”, y pegá la URL de /embed/reporting/<id> en el campo embed de src/content/site.ts."}
-                  {project.category === "Desarrollo web" &&
+                  {(project.category === "Desarrollo web" ||
+                    project.category === "Python") &&
                     `Agregá una captura en public${project.image ?? "/projects/..."} para mostrarla en esta página.`}
                 </p>
               </div>
