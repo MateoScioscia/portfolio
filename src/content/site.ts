@@ -9,7 +9,10 @@ export const profile = {
   firstName: "Mateo",
   role: "Analista de Datos & BI · IA aplicada",
   tagline:
-    "Transformo datos en información clara para que los equipos decidan mejor. Power BI, SQL y Python aplicados al negocio, con inteligencia artificial para construir más rápido.",
+    "Ayudo a equipos a tomar mejores decisiones a través de tableros claros y análisis de negocio accionables. Especializado en Power BI, SQL y Python, construyo desde el modelado de datos hasta dashboards interactivos, automatizando lo repetitivo con Power Query. Aplico IA para potenciar el análisis y acortar los tiempos de entrega.",
+  // Versión corta para Google y para la vista previa al compartir el link.
+  metaDescription:
+    "Analista de Datos & BI. Tableros claros y análisis accionables con Power BI, SQL y Python, potenciados con IA.",
   location: "Buenos Aires, Argentina",
   email: "matescioscia@gmail.com",
   phone: "+54 9 11 6484-0645",

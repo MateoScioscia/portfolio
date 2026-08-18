@@ -16,10 +16,10 @@ const display = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.role}`,
-  description: profile.tagline,
+  description: profile.metaDescription,
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
-    description: profile.tagline,
+    description: profile.metaDescription,
     locale: "es_AR",
     type: "website",
   },
